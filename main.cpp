@@ -13,7 +13,6 @@ int main()
         **/
     int kol_chisel;
     int minim = 9999999999999;
-    int vivod;
     cin >> kol_chisel;
     vector<int> chislo(kol_chisel);
     for (int i = 0; i < kol_chisel; i++){
@@ -25,13 +24,12 @@ int main()
                 if((chislo[i]!=chislo[j]) && (chislo[i]!=chislo[z]) && (chislo[j]!=chislo[z]) ){
                     if(((chislo[i]+chislo[j]+chislo[z]) % 4 == 0 ) && ((chislo[i]+chislo[j]+chislo[z])<minim)){
                         minim = (chislo[i]+chislo[j]+chislo[z]);
-                        cout << chislo[i] << chislo[j] << chislo[z] << endl;
 
                     }
             }
-        };
+        }
     }
     }
 
-    //cout << vivod;
+    cout << minim;
 }
